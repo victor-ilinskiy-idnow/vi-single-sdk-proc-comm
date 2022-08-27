@@ -33,7 +33,11 @@ class NotificationCenterMessageTransport: MessageTransport {
         }
         
         let key = UUID().uuidString
-        subscribers[key] = listeners
+        
+        notificationQueue.addOperation { [weak self] in
+            self?.subscribers[key] = listeners
+        }
+        
         return key
     }
     
@@ -43,5 +47,9 @@ class NotificationCenterMessageTransport: MessageTransport {
         }
         
         listeners.forEach { notificationCenter.removeObserver($0) }
+        
+        notificationQueue.addOperation { [weak self] in
+            self?.subscribers[token] = nil
+        }
     }
 }
