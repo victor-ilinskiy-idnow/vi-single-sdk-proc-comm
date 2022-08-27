@@ -12,6 +12,6 @@ typealias MessageTransportCancelToken = String
 
 protocol MessageTransport {
     func sendMessage(message: CommMessage)
-    func startListenMessages(listener: MessageTransportListener) -> MessageTransportCancelToken
+    func startListenMessages(types: [String], listener: @escaping MessageTransportListener) -> MessageTransportCancelToken
     func stopListenMassages(token: MessageTransportCancelToken)
 }
