@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SampleApp/SampleApp.xcodeproj">
+      location = "group:module-comm-sample.xcodeproj">
    </FileRef>
 </Workspace>
