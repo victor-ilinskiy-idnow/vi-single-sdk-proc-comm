@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+open class CoreModuleEngine {
+    enum Transport {
+        case notificationCenter
+        case eventBus
+    }
+    
+    func sendMessageToModuleA(transport: Transport) {
+        
+    }
+    
+    func sendMessageToModuleB(transport: Transport) {
+        
+    }
+}
