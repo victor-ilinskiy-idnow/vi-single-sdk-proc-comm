@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class MessageBusMessageTransport: MessageTransport {
+class MessageBusMessageTransport: MessageTransport {
     static let shared = MessageBusMessageTransport()
     private var bus: [String: [MessageTransportCancelToken]] = [:]
     private var subscribers: [MessageTransportCancelToken: MessageTransportListener] = [:]

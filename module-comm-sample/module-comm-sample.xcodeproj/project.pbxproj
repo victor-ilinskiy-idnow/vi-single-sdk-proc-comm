@@ -28,8 +28,15 @@
 		E92CC7FF28B798330008D9F3 /* CoreModuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CC7FE28B798330008D9F3 /* CoreModuleEngine.swift */; };
 		E95996C328B98AB000C7DF83 /* MessageTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996C228B98AB000C7DF83 /* MessageTransport.swift */; };
 		E95996C528B998A200C7DF83 /* MessageTransportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996C428B998A200C7DF83 /* MessageTransportFactory.swift */; };
+		E95996CD28BAE51F00C7DF83 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
+		E95996CE28BAE5DD00C7DF83 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
+		E95996CF28BAE5E000C7DF83 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
+		E95996D128BB990800C7DF83 /* ModuleAEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D028BB990800C7DF83 /* ModuleAEngine.swift */; };
+		E95996D328BB993300C7DF83 /* ModuleAInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D228BB993300C7DF83 /* ModuleAInitialiser.swift */; };
+		E95996D628BBA6AF00C7DF83 /* FeatureModuleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D428BBA4EF00C7DF83 /* FeatureModuleLoader.swift */; };
+		E95996D928BBA6FC00C7DF83 /* ModuleBInitialiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D728BBA6FC00C7DF83 /* ModuleBInitialiser.swift */; };
+		E95996DA28BBA6FC00C7DF83 /* ModuleBEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D828BBA6FC00C7DF83 /* ModuleBEngine.swift */; };
 		E964F52D28B8E71300A8ABDB /* CommunicationModule.docc in Sources */ = {isa = PBXBuildFile; fileRef = E964F52C28B8E71300A8ABDB /* CommunicationModule.docc */; };
-		E964F53328B8E71300A8ABDB /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
 		E964F53B28B8E71300A8ABDB /* CommunicationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = E964F52B28B8E71300A8ABDB /* CommunicationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E964F53E28B8E71300A8ABDB /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
 		E964F53F28B8E71300A8ABDB /* CommunicationModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,19 +67,40 @@
 			remoteGlobalIDString = E92CC7E028B797E10008D9F3;
 			remoteInfo = Core;
 		};
-		E964F53428B8E71300A8ABDB /* PBXContainerItemProxy */ = {
+		E95996C628BAE4FD00C7DF83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E964F52828B8E71300A8ABDB;
 			remoteInfo = CommunicationModule;
 		};
-		E964F53628B8E71300A8ABDB /* PBXContainerItemProxy */ = {
+		E95996C828BAE50A00C7DF83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E92CC77F28B7969E0008D9F3;
-			remoteInfo = SampleApp;
+			remoteGlobalIDString = E964F52828B8E71300A8ABDB;
+			remoteInfo = CommunicationModule;
+		};
+		E95996CA28BAE51200C7DF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E964F52828B8E71300A8ABDB;
+			remoteInfo = CommunicationModule;
+		};
+		E95996DB28BBA76500C7DF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E92CC79B28B797260008D9F3;
+			remoteInfo = ModuleA;
+		};
+		E95996DD28BBA76900C7DF83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E92CC7BE28B797420008D9F3;
+			remoteInfo = ModuleB;
 		};
 		E964F53C28B8E71300A8ABDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -121,10 +149,14 @@
 		E92CC7FE28B798330008D9F3 /* CoreModuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreModuleEngine.swift; sourceTree = "<group>"; };
 		E95996C228B98AB000C7DF83 /* MessageTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTransport.swift; sourceTree = "<group>"; };
 		E95996C428B998A200C7DF83 /* MessageTransportFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTransportFactory.swift; sourceTree = "<group>"; };
+		E95996D028BB990800C7DF83 /* ModuleAEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleAEngine.swift; sourceTree = "<group>"; };
+		E95996D228BB993300C7DF83 /* ModuleAInitialiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleAInitialiser.swift; sourceTree = "<group>"; };
+		E95996D428BBA4EF00C7DF83 /* FeatureModuleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureModuleLoader.swift; sourceTree = "<group>"; };
+		E95996D728BBA6FC00C7DF83 /* ModuleBInitialiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBInitialiser.swift; sourceTree = "<group>"; };
+		E95996D828BBA6FC00C7DF83 /* ModuleBEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBEngine.swift; sourceTree = "<group>"; };
 		E964F52928B8E71300A8ABDB /* CommunicationModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommunicationModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E964F52B28B8E71300A8ABDB /* CommunicationModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunicationModule.h; sourceTree = "<group>"; };
 		E964F52C28B8E71300A8ABDB /* CommunicationModule.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CommunicationModule.docc; sourceTree = "<group>"; };
-		E964F53228B8E71300A8ABDB /* CommunicationModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommunicationModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E964F54628B8E73E00A8ABDB /* NotificationCenterMessageTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterMessageTransport.swift; sourceTree = "<group>"; };
 		E964F54828B8E75000A8ABDB /* MessageBusMessageTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBusMessageTransport.swift; sourceTree = "<group>"; };
 		E964F54A28B8E86B00A8ABDB /* CommMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommMessages.swift; sourceTree = "<group>"; };
@@ -146,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95996CF28BAE5E000C7DF83 /* CommunicationModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95996CE28BAE5DD00C7DF83 /* CommunicationModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95996CD28BAE51F00C7DF83 /* CommunicationModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,14 +202,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E964F52F28B8E71300A8ABDB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E964F53328B8E71300A8ABDB /* CommunicationModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +217,7 @@
 				E92CC7E228B797E10008D9F3 /* Core */,
 				E964F52A28B8E71300A8ABDB /* CommunicationModule */,
 				E92CC78128B7969E0008D9F3 /* Products */,
+				E95996CC28BAE51F00C7DF83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,7 +229,6 @@
 				E92CC7BF28B797420008D9F3 /* ModuleB.framework */,
 				E92CC7E128B797E10008D9F3 /* ModuleCore.framework */,
 				E964F52928B8E71300A8ABDB /* CommunicationModule.framework */,
-				E964F53228B8E71300A8ABDB /* CommunicationModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +252,8 @@
 			children = (
 				E92CC79E28B797260008D9F3 /* ModuleA.h */,
 				E92CC79F28B797260008D9F3 /* ModuleA.docc */,
+				E95996D028BB990800C7DF83 /* ModuleAEngine.swift */,
+				E95996D228BB993300C7DF83 /* ModuleAInitialiser.swift */,
 			);
 			path = ModuleA;
 			sourceTree = "<group>";
@@ -232,6 +261,8 @@
 		E92CC7C028B797420008D9F3 /* ModuleB */ = {
 			isa = PBXGroup;
 			children = (
+				E95996D828BBA6FC00C7DF83 /* ModuleBEngine.swift */,
+				E95996D728BBA6FC00C7DF83 /* ModuleBInitialiser.swift */,
 				E92CC7C128B797420008D9F3 /* ModuleB.h */,
 				E92CC7C228B797420008D9F3 /* ModuleB.docc */,
 			);
@@ -244,8 +275,16 @@
 				E92CC7E328B797E10008D9F3 /* Core.h */,
 				E92CC7E428B797E10008D9F3 /* Core.docc */,
 				E92CC7FE28B798330008D9F3 /* CoreModuleEngine.swift */,
+				E95996D428BBA4EF00C7DF83 /* FeatureModuleLoader.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E95996CC28BAE51F00C7DF83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E964F52A28B8E71300A8ABDB /* CommunicationModule */ = {
@@ -334,6 +373,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E95996C728BAE4FD00C7DF83 /* PBXTargetDependency */,
 			);
 			name = ModuleA;
 			productName = ModuleA;
@@ -352,6 +392,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E95996C928BAE50A00C7DF83 /* PBXTargetDependency */,
 			);
 			name = ModuleB;
 			productName = ModuleB;
@@ -370,6 +411,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				E95996DE28BBA76900C7DF83 /* PBXTargetDependency */,
+				E95996DC28BBA76500C7DF83 /* PBXTargetDependency */,
+				E95996CB28BAE51200C7DF83 /* PBXTargetDependency */,
 			);
 			name = ModuleCore;
 			productName = Core;
@@ -393,25 +437,6 @@
 			productName = CommunicationModule;
 			productReference = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		E964F53128B8E71300A8ABDB /* CommunicationModuleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E964F54528B8E71300A8ABDB /* Build configuration list for PBXNativeTarget "CommunicationModuleTests" */;
-			buildPhases = (
-				E964F52E28B8E71300A8ABDB /* Sources */,
-				E964F52F28B8E71300A8ABDB /* Frameworks */,
-				E964F53028B8E71300A8ABDB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E964F53528B8E71300A8ABDB /* PBXTargetDependency */,
-				E964F53728B8E71300A8ABDB /* PBXTargetDependency */,
-			);
-			name = CommunicationModuleTests;
-			productName = CommunicationModuleTests;
-			productReference = E964F53228B8E71300A8ABDB /* CommunicationModuleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -438,10 +463,6 @@
 					E964F52828B8E71300A8ABDB = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					E964F53128B8E71300A8ABDB = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = E92CC77F28B7969E0008D9F3;
-					};
 				};
 			};
 			buildConfigurationList = E92CC77B28B7969E0008D9F3 /* Build configuration list for PBXProject "module-comm-sample" */;
@@ -462,7 +483,6 @@
 				E92CC7BE28B797420008D9F3 /* ModuleB */,
 				E92CC7E028B797E10008D9F3 /* ModuleCore */,
 				E964F52828B8E71300A8ABDB /* CommunicationModule */,
-				E964F53128B8E71300A8ABDB /* CommunicationModuleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -506,13 +526,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E964F53028B8E71300A8ABDB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -531,6 +544,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E92CC7A028B797260008D9F3 /* ModuleA.docc in Sources */,
+				E95996D128BB990800C7DF83 /* ModuleAEngine.swift in Sources */,
+				E95996D328BB993300C7DF83 /* ModuleAInitialiser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +553,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95996DA28BBA6FC00C7DF83 /* ModuleBEngine.swift in Sources */,
+				E95996D928BBA6FC00C7DF83 /* ModuleBInitialiser.swift in Sources */,
 				E92CC7C328B797420008D9F3 /* ModuleB.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +565,7 @@
 			files = (
 				E92CC7FF28B798330008D9F3 /* CoreModuleEngine.swift in Sources */,
 				E92CC7E528B797E10008D9F3 /* Core.docc in Sources */,
+				E95996D628BBA6AF00C7DF83 /* FeatureModuleLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,13 +579,6 @@
 				E964F52D28B8E71300A8ABDB /* CommunicationModule.docc in Sources */,
 				E964F54928B8E75000A8ABDB /* MessageBusMessageTransport.swift in Sources */,
 				E964F54728B8E73E00A8ABDB /* NotificationCenterMessageTransport.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E964F52E28B8E71300A8ABDB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,15 +600,30 @@
 			target = E92CC7E028B797E10008D9F3 /* ModuleCore */;
 			targetProxy = E92CC7F428B797E20008D9F3 /* PBXContainerItemProxy */;
 		};
-		E964F53528B8E71300A8ABDB /* PBXTargetDependency */ = {
+		E95996C728BAE4FD00C7DF83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E964F52828B8E71300A8ABDB /* CommunicationModule */;
-			targetProxy = E964F53428B8E71300A8ABDB /* PBXContainerItemProxy */;
+			targetProxy = E95996C628BAE4FD00C7DF83 /* PBXContainerItemProxy */;
 		};
-		E964F53728B8E71300A8ABDB /* PBXTargetDependency */ = {
+		E95996C928BAE50A00C7DF83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E92CC77F28B7969E0008D9F3 /* SampleApp */;
-			targetProxy = E964F53628B8E71300A8ABDB /* PBXContainerItemProxy */;
+			target = E964F52828B8E71300A8ABDB /* CommunicationModule */;
+			targetProxy = E95996C828BAE50A00C7DF83 /* PBXContainerItemProxy */;
+		};
+		E95996CB28BAE51200C7DF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E964F52828B8E71300A8ABDB /* CommunicationModule */;
+			targetProxy = E95996CA28BAE51200C7DF83 /* PBXContainerItemProxy */;
+		};
+		E95996DC28BBA76500C7DF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E92CC79B28B797260008D9F3 /* ModuleA */;
+			targetProxy = E95996DB28BBA76500C7DF83 /* PBXContainerItemProxy */;
+		};
+		E95996DE28BBA76900C7DF83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E92CC7BE28B797420008D9F3 /* ModuleB */;
+			targetProxy = E95996DD28BBA76900C7DF83 /* PBXContainerItemProxy */;
 		};
 		E964F53D28B8E71300A8ABDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1038,42 +1064,6 @@
 			};
 			name = Release;
 		};
-		E964F54228B8E71300A8ABDB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8DM7J729SL;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.CommunicationModuleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
-			};
-			name = Debug;
-		};
-		E964F54328B8E71300A8ABDB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8DM7J729SL;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.CommunicationModuleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleApp.app/SampleApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1127,15 +1117,6 @@
 			buildConfigurations = (
 				E964F54028B8E71300A8ABDB /* Debug */,
 				E964F54128B8E71300A8ABDB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E964F54528B8E71300A8ABDB /* Build configuration list for PBXNativeTarget "CommunicationModuleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E964F54228B8E71300A8ABDB /* Debug */,
-				E964F54328B8E71300A8ABDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

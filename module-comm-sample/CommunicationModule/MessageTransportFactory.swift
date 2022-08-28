@@ -7,13 +7,13 @@
 
 import Foundation
 
+public enum TransportType: CaseIterable {
+    case notificationCenter
+    case messageBus
+}
+
 public class MessageTransportFactory {
-    enum TransportType {
-        case notificationCenter
-        case messageBus
-    }
-    
-    func createTransport(type: TransportType) -> MessageTransport {
+    public static func createTransport(type: TransportType) -> MessageTransport {
         switch type {
         case .notificationCenter:
             return NotificationCenterMessageTransport.shared

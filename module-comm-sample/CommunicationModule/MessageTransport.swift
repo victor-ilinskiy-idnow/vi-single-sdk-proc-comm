@@ -7,10 +7,10 @@
 
 import Foundation
 
-typealias MessageTransportListener = (CommMessage) -> Void
-typealias MessageTransportCancelToken = String
+public typealias MessageTransportListener = (CommMessage) -> Void
+public typealias MessageTransportCancelToken = String
 
-protocol MessageTransport {
+public protocol MessageTransport {
     func sendMessage(message: CommMessage)
     func startListenMessages(types: [String], listener: @escaping MessageTransportListener) -> MessageTransportCancelToken
     func stopListenMassages(token: MessageTransportCancelToken)
