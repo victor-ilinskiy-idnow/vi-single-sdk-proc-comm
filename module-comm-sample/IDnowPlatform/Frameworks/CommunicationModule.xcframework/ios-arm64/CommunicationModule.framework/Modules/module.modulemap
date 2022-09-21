@@ -1,0 +1,11 @@
+framework module CommunicationModule {
+  umbrella header "CommunicationModule.h"
+
+  export *
+  module * { export * }
+}
+
+module CommunicationModule.Swift {
+    header "CommunicationModule-Swift.h"
+    requires objc
+}

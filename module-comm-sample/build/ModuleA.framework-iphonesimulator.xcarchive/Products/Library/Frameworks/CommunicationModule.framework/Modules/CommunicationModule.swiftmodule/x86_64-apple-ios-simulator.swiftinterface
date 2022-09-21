@@ -1,0 +1,57 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CommunicationModule
+@_exported import CommunicationModule
+import Foundation
+import Swift
+import _Concurrency
+public typealias MessageTransportListener = (CommunicationModule.CommMessage) -> Swift.Void
+public typealias MessageTransportCancelToken = Swift.String
+public protocol MessageTransport {
+  func sendMessage(message: CommunicationModule.CommMessage)
+  func startListenMessages(types: [Swift.String], listener: @escaping CommunicationModule.MessageTransportListener) -> CommunicationModule.MessageTransportCancelToken
+  func stopListenMassages(token: CommunicationModule.MessageTransportCancelToken)
+}
+public enum TransportType : Swift.CaseIterable {
+  case notificationCenter
+  case messageBus
+  public static func == (a: CommunicationModule.TransportType, b: CommunicationModule.TransportType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [CommunicationModule.TransportType]
+  public static var allCases: [CommunicationModule.TransportType] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class MessageTransportFactory {
+  public static func createTransport(type: CommunicationModule.TransportType) -> CommunicationModule.MessageTransport
+  @objc deinit
+}
+public struct CommMessage {
+  public let type: Swift.String
+  public let payload: Foundation.Data
+  public init(type: Swift.String, payload: Foundation.Data)
+}
+extension CommunicationModule.CommMessage : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum MessageTypes : Swift.String {
+  case helloToModuleA
+  case helloToModuleB
+  case answerFromModuleA
+  case answerFromModuleB
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CommunicationModule.TransportType : Swift.Equatable {}
+extension CommunicationModule.TransportType : Swift.Hashable {}
+extension CommunicationModule.MessageTypes : Swift.Equatable {}
+extension CommunicationModule.MessageTypes : Swift.Hashable {}
+extension CommunicationModule.MessageTypes : Swift.RawRepresentable {}
