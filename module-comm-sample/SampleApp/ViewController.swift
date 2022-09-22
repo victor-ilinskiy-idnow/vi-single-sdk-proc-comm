@@ -7,7 +7,7 @@
 
 import UIKit
 import ModuleCore
-import CommunicationModule
+@_implementationOnly import CommunicationModule
 import Combine
 
 class ViewController: UIViewController {
@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet var sendAButton: UIButton?
     @IBOutlet var sendBButton: UIButton?
     
-    private var selectedTransport: TransportType?
+    private var selectedTransport: String?
     private var subscribers = Set<AnyCancellable>()
     
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { text in
                 let c = UIAlertController(title: "Message!", message: text, preferredStyle: .alert)
+                c.addAction(.init(title: "OK", style: .default))
                 self.present(c, animated: true)
             }.store(in: &subscribers)
     }
@@ -41,13 +42,13 @@ class ViewController: UIViewController {
     
     @IBAction func onNotificationCenterSelect(_ sender: Any) {
         transportMenu?.setTitle("Notification Center", for: .normal)
-        selectedTransport = .notificationCenter
+        selectedTransport = "notificationCenter"
         updateButtons()
     }
         
     @IBAction func onMesageBusSelect(_ sender: Any) {
         transportMenu?.setTitle("Message Bus", for: .normal)
-        selectedTransport = .messageBus
+        selectedTransport = "messageBus"
         updateButtons()
     }
     

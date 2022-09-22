@@ -15,11 +15,8 @@
 		E92CC79028B7969F0008D9F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92CC78E28B7969F0008D9F3 /* LaunchScreen.storyboard */; };
 		E92CC7A028B797260008D9F3 /* ModuleA.docc in Sources */ = {isa = PBXBuildFile; fileRef = E92CC79F28B797260008D9F3 /* ModuleA.docc */; };
 		E92CC7AE28B797260008D9F3 /* ModuleA.h in Headers */ = {isa = PBXBuildFile; fileRef = E92CC79E28B797260008D9F3 /* ModuleA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E92CC7B128B797260008D9F3 /* ModuleA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CC79C28B797260008D9F3 /* ModuleA.framework */; };
-		E92CC7B228B797260008D9F3 /* ModuleA.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E92CC79C28B797260008D9F3 /* ModuleA.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E92CC7C328B797420008D9F3 /* ModuleB.docc in Sources */ = {isa = PBXBuildFile; fileRef = E92CC7C228B797420008D9F3 /* ModuleB.docc */; };
 		E92CC7D128B797420008D9F3 /* ModuleB.h in Headers */ = {isa = PBXBuildFile; fileRef = E92CC7C128B797420008D9F3 /* ModuleB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E92CC7D428B797420008D9F3 /* ModuleB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CC7BF28B797420008D9F3 /* ModuleB.framework */; };
 		E92CC7D528B797420008D9F3 /* ModuleB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E92CC7BF28B797420008D9F3 /* ModuleB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E92CC7E528B797E10008D9F3 /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = E92CC7E428B797E10008D9F3 /* Core.docc */; };
 		E92CC7F328B797E20008D9F3 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = E92CC7E328B797E10008D9F3 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,7 +25,6 @@
 		E92CC7FF28B798330008D9F3 /* CoreModuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92CC7FE28B798330008D9F3 /* CoreModuleEngine.swift */; };
 		E95996C328B98AB000C7DF83 /* MessageTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996C228B98AB000C7DF83 /* MessageTransport.swift */; };
 		E95996C528B998A200C7DF83 /* MessageTransportFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996C428B998A200C7DF83 /* MessageTransportFactory.swift */; };
-		E95996CD28BAE51F00C7DF83 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
 		E95996CE28BAE5DD00C7DF83 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
 		E95996CF28BAE5E000C7DF83 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
 		E95996D128BB990800C7DF83 /* ModuleAEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D028BB990800C7DF83 /* ModuleAEngine.swift */; };
@@ -38,28 +34,16 @@
 		E95996DA28BBA6FC00C7DF83 /* ModuleBEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95996D828BBA6FC00C7DF83 /* ModuleBEngine.swift */; };
 		E964F52D28B8E71300A8ABDB /* CommunicationModule.docc in Sources */ = {isa = PBXBuildFile; fileRef = E964F52C28B8E71300A8ABDB /* CommunicationModule.docc */; };
 		E964F53B28B8E71300A8ABDB /* CommunicationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = E964F52B28B8E71300A8ABDB /* CommunicationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E964F53E28B8E71300A8ABDB /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
-		E964F53F28B8E71300A8ABDB /* CommunicationModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E964F54728B8E73E00A8ABDB /* NotificationCenterMessageTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E964F54628B8E73E00A8ABDB /* NotificationCenterMessageTransport.swift */; };
 		E964F54928B8E75000A8ABDB /* MessageBusMessageTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E964F54828B8E75000A8ABDB /* MessageBusMessageTransport.swift */; };
 		E964F54B28B8E86B00A8ABDB /* CommMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E964F54A28B8E86B00A8ABDB /* CommMessages.swift */; };
+		E97FF7A228DBBC7C00FF6C35 /* CommunicationModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; };
+		E97FF7A328DBBC7C00FF6C35 /* CommunicationModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E964F52928B8E71300A8ABDB /* CommunicationModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E97FF7A528DBBFF300FF6C35 /* ModuleA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CC79C28B797260008D9F3 /* ModuleA.framework */; };
+		E97FF7A628DBBFF700FF6C35 /* ModuleB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92CC7BF28B797420008D9F3 /* ModuleB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E92CC7AF28B797260008D9F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E92CC79B28B797260008D9F3;
-			remoteInfo = ModuleA;
-		};
-		E92CC7D228B797420008D9F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E92CC7BE28B797420008D9F3;
-			remoteInfo = ModuleB;
-		};
 		E92CC7F428B797E20008D9F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
@@ -102,13 +86,6 @@
 			remoteGlobalIDString = E92CC7BE28B797420008D9F3;
 			remoteInfo = ModuleB;
 		};
-		E964F53C28B8E71300A8ABDB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E92CC77828B7969E0008D9F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E964F52828B8E71300A8ABDB;
-			remoteInfo = CommunicationModule;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,10 +95,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E92CC7B228B797260008D9F3 /* ModuleA.framework in Embed Frameworks */,
-				E964F53F28B8E71300A8ABDB /* CommunicationModule.framework in Embed Frameworks */,
 				E92CC7F728B797E20008D9F3 /* ModuleCore.framework in Embed Frameworks */,
 				E92CC7D528B797420008D9F3 /* ModuleB.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97FF7A428DBBC7C00FF6C35 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E97FF7A328DBBC7C00FF6C35 /* CommunicationModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,10 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E92CC7B128B797260008D9F3 /* ModuleA.framework in Frameworks */,
-				E964F53E28B8E71300A8ABDB /* CommunicationModule.framework in Frameworks */,
 				E92CC7F628B797E20008D9F3 /* ModuleCore.framework in Frameworks */,
-				E92CC7D428B797420008D9F3 /* ModuleB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +177,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E95996CD28BAE51F00C7DF83 /* CommunicationModule.framework in Frameworks */,
+				E97FF7A628DBBFF700FF6C35 /* ModuleB.framework in Frameworks */,
+				E97FF7A528DBBFF300FF6C35 /* ModuleA.framework in Frameworks */,
+				E97FF7A228DBBC7C00FF6C35 /* CommunicationModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +336,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E92CC7B028B797260008D9F3 /* PBXTargetDependency */,
-				E92CC7D328B797420008D9F3 /* PBXTargetDependency */,
 				E92CC7F528B797E20008D9F3 /* PBXTargetDependency */,
-				E964F53D28B8E71300A8ABDB /* PBXTargetDependency */,
 			);
 			name = SampleApp;
 			productName = SampleApp;
@@ -407,6 +389,7 @@
 				E92CC7DD28B797E10008D9F3 /* Sources */,
 				E92CC7DE28B797E10008D9F3 /* Frameworks */,
 				E92CC7DF28B797E10008D9F3 /* Resources */,
+				E97FF7A428DBBC7C00FF6C35 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -585,16 +568,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E92CC7B028B797260008D9F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E92CC79B28B797260008D9F3 /* ModuleA */;
-			targetProxy = E92CC7AF28B797260008D9F3 /* PBXContainerItemProxy */;
-		};
-		E92CC7D328B797420008D9F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E92CC7BE28B797420008D9F3 /* ModuleB */;
-			targetProxy = E92CC7D228B797420008D9F3 /* PBXContainerItemProxy */;
-		};
 		E92CC7F528B797E20008D9F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E92CC7E028B797E10008D9F3 /* ModuleCore */;
@@ -624,11 +597,6 @@
 			isa = PBXTargetDependency;
 			target = E92CC7BE28B797420008D9F3 /* ModuleB */;
 			targetProxy = E95996DD28BBA76900C7DF83 /* PBXContainerItemProxy */;
-		};
-		E964F53D28B8E71300A8ABDB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E964F52828B8E71300A8ABDB /* CommunicationModule */;
-			targetProxy = E964F53C28B8E71300A8ABDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -827,6 +795,7 @@
 		E92CC7B428B797260008D9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -857,6 +826,7 @@
 		E92CC7B528B797260008D9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -887,6 +857,7 @@
 		E92CC7D728B797430008D9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -917,6 +888,7 @@
 		E92CC7D828B797430008D9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -947,6 +919,7 @@
 		E92CC7F928B797E20008D9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -977,6 +950,7 @@
 		E92CC7FA28B797E20008D9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1007,6 +981,7 @@
 		E964F54028B8E71300A8ABDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1037,6 +1012,7 @@
 		E964F54128B8E71300A8ABDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

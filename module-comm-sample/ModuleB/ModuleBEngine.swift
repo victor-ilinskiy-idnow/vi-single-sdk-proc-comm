@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CommunicationModule
+@_implementationOnly import CommunicationModule
 
 class ModuleBEngine {
     static let sharedInstance = ModuleBEngine()

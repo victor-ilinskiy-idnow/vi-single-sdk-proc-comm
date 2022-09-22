@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CommunicationModule
+@_implementationOnly import CommunicationModule
 import Combine
 
 public class CoreModuleEngine {
@@ -30,14 +30,14 @@ public class CoreModuleEngine {
         }
     }
     
-    public func sendMessageToModuleA(transport: TransportType, text: String) {
-        let sender = MessageTransportFactory.createTransport(type: transport)
+    public func sendMessageToModuleA(transport: String, text: String) {
+        let sender = MessageTransportFactory.createTransport(type: TransportType(rawValue: transport)!)
         sender.sendMessage(message: .init(type: MessageTypes.helloToModuleA.rawValue,
                                           payload: makeSendPayload(text: text)))
     }
     
-    public func sendMessageToModuleB(transport: TransportType, text: String) {
-        let sender = MessageTransportFactory.createTransport(type: transport)
+    public func sendMessageToModuleB(transport: String, text: String) {
+        let sender = MessageTransportFactory.createTransport(type: TransportType(rawValue: transport)!)
         sender.sendMessage(message: .init(type: MessageTypes.helloToModuleB.rawValue,
                                           payload: makeSendPayload(text: text)))
     }

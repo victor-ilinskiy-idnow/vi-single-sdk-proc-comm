@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import ModuleB
-import ModuleA
+@_implementationOnly import ModuleB
+@_implementationOnly import ModuleA
 
 class FeatureModuleLoader {
     enum FeatureFrameworks: String, CaseIterable {

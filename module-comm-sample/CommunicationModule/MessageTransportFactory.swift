@@ -7,9 +7,10 @@
 
 import Foundation
 
-public enum TransportType: CaseIterable {
+public enum TransportType: String, CaseIterable {
     case notificationCenter
     case messageBus
+    
 }
 
 public class MessageTransportFactory {
