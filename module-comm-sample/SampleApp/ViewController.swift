@@ -7,7 +7,6 @@
 
 import UIKit
 import ModuleCore
-@_implementationOnly import CommunicationModule
 import Combine
 
 class ViewController: UIViewController {
